@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mifas Mohamed | Fullstack Developer | Sri Lanka</title>
+    <meta name="description" content="I'm a fullstack deveoper, primarily working with Laravel, Living in Colombo, Sri Lanka">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <div class="verticle-center">
+
+        <section class="hero has-text-centered">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-spaced">
+                        Hi, I'm Mifas <span class="icon is-medium "><i class="fa fa-smile-o" aria-hidden="true"></i></span>
+                    </h1>
+                    <h2 class="subtitle">
+                        I'm a Full-stack Web Developer, Living in Colombo, Sri Lanka
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <div class="columns">
+            <div class="column">
+                <ul class="is-flex-mobile">
+
+                        <li>
+                            <a href="javascript:;" data-target='portfolio' target="_blank" class="portfolio page-handle">
+                                <span class="icon">
+                                    <i class="fa fa-code" aria-hidden="true"></i> 
+                                </span>
+                                Portfolio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://twitter.com/mifas" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i> 
+                                </span>
+                                Twitter
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/mifas" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-github" aria-hidden="true"></i> 
+                                </span>
+                                Github
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/mifas-mohamed-08a55725" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i> 
+                                </span>
+                                Linkedin
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assets/Mifas_CV_mmifas@gmail.com.pdf" target="_blank">
+                                <span class="icon">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i> 
+                                </span>
+                                Resume
+                            </a>
+                        </li>
+
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page portfolio" style="display:none;">
+        <div class="close-page">
+                <span class="icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>Close
+                </span>
+        </div>
+        <div class="portfolio-page">
+            <div class="container">
+                <h2 class="title is-2 has-text-centered">Personal Projects</h2>
+                
+                <div class="columns">
+                    <div class="column is-6">
+                        <figure class="image is-16by9">
+                            <img src="assets/img/CV_Builder.gif">
+                        </figure>
+                        <p>CV Builder allows build your CV in Real-time view. Dynamiccly handle pages and drag & drop elements
+                            easily.</p>
+                        <span class="tag is-warning">In-progress</span>
+                    </div>
+                    <div class="column is-6">
+                        <figure class="image is-16by9">
+                            <img src="assets/img/Vuejs-Filemanager.gif">
+                        </figure>
+                        <p>Vue.js Filemanager is cross platform, manage your files and folder. Can work with PHP,Node.js </p>
+                        <span class="tag is-warning">In-progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" type=""></script>
+
+    <script>
+        $(function () {
+            $('.portfolio').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function (item) {
+                        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                    }
+                }
+            });
+
+            $('.page-handle').click(function(){
+                $('.page.'+$(this).attr('data-target')).fadeIn();
+            })
+
+            $('.close-page').on('click',function(){
+                $(this).closest('.page').fadeOut();
+            })
+        })
+    </script>
+</body>
+
+</html>
